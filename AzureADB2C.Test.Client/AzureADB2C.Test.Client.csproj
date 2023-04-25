@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AngularClient\" />
+    <Folder Include="client-angular\" />
+    <Folder Include="client-angular\d4driver-test-portal" />
   </ItemGroup>
 
 </Project>
