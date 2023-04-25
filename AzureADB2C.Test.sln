@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureADB2C.Test", "AzureADB2C.Test\AzureADB2C.Test.csproj", "{3E55A470-BDA9-4B73-8BD2-A7A56643DF58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureADB2C.Test.Client", "AzureADB2C.Test.Client\AzureADB2C.Test.Client.csproj", "{DC8D04C5-CBCD-4648-9FCC-B5F6721D6B7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E55A470-BDA9-4B73-8BD2-A7A56643DF58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E55A470-BDA9-4B73-8BD2-A7A56643DF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E55A470-BDA9-4B73-8BD2-A7A56643DF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E55A470-BDA9-4B73-8BD2-A7A56643DF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8D04C5-CBCD-4648-9FCC-B5F6721D6B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8D04C5-CBCD-4648-9FCC-B5F6721D6B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8D04C5-CBCD-4648-9FCC-B5F6721D6B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8D04C5-CBCD-4648-9FCC-B5F6721D6B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F677F1EF-0A25-44F2-B612-0C212E624B16}
+	EndGlobalSection
+EndGlobal
