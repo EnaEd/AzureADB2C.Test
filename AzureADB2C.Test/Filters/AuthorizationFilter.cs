@@ -2,9 +2,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using AzureADB2C.Test.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AzureADB2C.Test.Filters;
+
 
 public class AuthorizationFilter : IAuthorizationFilter
 {
@@ -15,7 +18,7 @@ public class AuthorizationFilter : IAuthorizationFilter
         _userManager = userManager;
     }
 
-    public async void OnAuthorization(AuthorizationFilterContext context)
+    public async void OnAuthorization(AuthorizationFilterContext context)//pass some parameters like Roles/Permissions
     {
         var headersAuthorization = context.HttpContext.Request.Headers.Authorization.ToString();
         var parsedToken = headersAuthorization.Replace("Bearer", string.Empty).Trim();
@@ -29,7 +32,8 @@ public class AuthorizationFilter : IAuthorizationFilter
         var user = await _userManager.FindByEmailAsync(email?.Value) ?? throw new Exception();
 
         //next steps is to check users permissions and roles
-        // and throw 401/403 exception if user
+        // if roles from params don't match we can throw 401/403 exception if user
+        
 
         var stop = string.Empty;
     }
