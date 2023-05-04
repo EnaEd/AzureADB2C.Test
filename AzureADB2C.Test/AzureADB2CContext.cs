@@ -11,12 +11,6 @@ namespace AzureADB2C.Test
 
         public AzureADB2CContext(DbContextOptions<AzureADB2CContext> option) : base(option)
         {
-        }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-
             var admin = new AzureUser()
             {
                 Email = "Admin@Admin.com",
@@ -30,6 +24,13 @@ namespace AzureADB2C.Test
             };
 
             CreateUser(admin, this, true).GetAwaiter().GetResult();
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+           
 
             
         }
