@@ -34,7 +34,8 @@ const states = [AccountState];
       key: [AccountState]
     }),
   ],
-  providers: [{
+  providers: [
+  {
     provide: HTTP_INTERCEPTORS,
     useClass: MsalInterceptor,
     multi: true

@@ -6,18 +6,18 @@ import { BrowserUtils } from '@azure/msal-browser';
 
 const routes: Routes = [
   {
-      path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
-      path: 'login-failed',
-      component: FailedComponent
+    path: 'login-failed',
+    component: FailedComponent
   },
   { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule), canActivate: [MsalGuard] }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-      initialNavigation: !BrowserUtils.isInIframe() && !BrowserUtils.isInPopup() ? 'enabledNonBlocking' : 'disabled' // Set to enabledBlocking to use Angular Universal
+    initialNavigation: !BrowserUtils.isInIframe() && !BrowserUtils.isInPopup() ? 'enabledNonBlocking' : 'disabled' // Set to enabledBlocking to use Angular Universal
   })],
   exports: [RouterModule]
 })
